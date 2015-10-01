@@ -6,7 +6,7 @@
 #'runuser' command.
 
 #check existence
-if [ -e /home/vagrant/.rbenv != false]; then
+if [ -e /home/vagrant/.rbenv != false ]; then
 	echo "rbenv install..."
 	git clone https://github.com/sstephenson/rbenv.git /home/vagrant/.rbenv
 else
@@ -24,7 +24,7 @@ source /home/vagrant/.bash_profile
 sudo runuser -l vagrant -c 'rbenv --version'
 
 #check existence
-if [ ! -e /home/vagrant/.rbenv/plugins/ruby-build]; then
+if [ ! -e /home/vagrant/.rbenv/plugins/ruby-build ]; then
 	echo "ruby-build install..."
 	git clone https://github.com/sstephenson/ruby-build.git /home/vagrant/.rbenv/plugins/ruby-build  
 else
@@ -32,7 +32,7 @@ else
 fi
 
 #check list
-if [ ! -e "/home/vagrant/.rbenv/versions/2.1.6"]; then
+if [ ! -e "/home/vagrant/.rbenv/versions/2.1.6" ]; then
 	echo "ruby install..."
 	sudo runuser -l vagrant -c 'rbenv install 2.1.6'
 else
