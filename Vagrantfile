@@ -13,6 +13,8 @@ Vagrant.configure(2) do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "centos_7.0"
+  config.vm.provision :shell, path: "install_mysql.sh"
+  config.vm.provision :shell, path: "config_server.sh"
   config.vm.provision :shell, path: "install_ruby.sh"
   config.vm.provision :shell, path: "install_rails.sh"
   config.vm.provision :shell, path: "install_nginx.sh"
