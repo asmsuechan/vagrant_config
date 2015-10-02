@@ -4,7 +4,7 @@
 echo "mysql install starting..."
 
 base_url="http://downloads.mysql.com/archives/get/file/"
-files=("MySQL-server-5.6.26-1.linux_glibc2.5.x86_64.rpm" "MySQL-client-5.6.26-1.linux_glibc2.5.x86_64.rpm" "MySQL-shared-compat-5.6.26-1.linux_glibc2.5.x86_64.rpm" "MySQL-devel-5.6.26-1.linux_glibc2.5.x86_64.rpm")
+files=("MySQL-server-5.6.26-1.linux_glibc2.5.x86_64.rpm" "MySQL-client-5.6.26-1.linux_glibc2.5.x86_64.rpm" "MySQL-shared-compat-5.6.26-1.linux_glibc2.5.x86_64.rpm" "MySQL-devel-5.6.26-1.linux_glibc2.5.x86_64.rpm" "MySQL-shared-5.6.26-1.linux_glibc2.5.x86_64.rpm")
 home=/home/vagrant/
 
 #remove mariadb because of mariadb and mysql confliction

@@ -63,3 +63,6 @@ run the following command:
 ```
 $ sudo chmod +x setup.sh
 ```
+
+if 'gem install mysql2' failed
+remove mariadb again
