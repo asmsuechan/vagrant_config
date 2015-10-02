@@ -13,14 +13,15 @@ Vagrant.configure(2) do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "centos_7.0"
+
+  config.vm.provision :shell, path: "install/install_ruby.sh"
   #put nginx.conf in particular directory
-  config.vm.provision :shell, path: "set_nginx_config_files.sh"
   config.vm.provision :shell, path: "install/install_mysql.sh"
   #install various tools for server
-  config.vm.provision :shell, path: "install/install_toolssh"
-  config.vm.provision :shell, path: "install/install_ruby.sh"
+  config.vm.provision :shell, path: "install/install_tools.sh"
   config.vm.provision :shell, path: "install/install_rails.sh"
   config.vm.provision :shell, path: "install/install_nginx.sh"
+  config.vm.provision :shell, path: "set_nginx_config_files.sh"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs

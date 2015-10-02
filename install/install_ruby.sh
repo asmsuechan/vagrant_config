@@ -5,10 +5,12 @@
 #so i change run-user by using
 #'runuser' command.
 
+sudo yum install -y git
+
 #check existence
 if [ ! -e /home/vagrant/.rbenv ]; then
 	echo "rbenv install..."
-	git clone https://github.com/sstephenson/rbenv.git /home/vagrant/.rbenv
+	sudo runuser -l vagrant -c 'git clone https://github.com/sstephenson/rbenv.git /home/vagrant/.rbenv'
 else
 	echo ".rbenv already exist."
 fi

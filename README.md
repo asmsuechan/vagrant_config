@@ -8,6 +8,7 @@ in order to setup, run as follows:
 
 ##installed component
 ```
+git
 Ruby 2.1.6
 Rails
 MySQL 5.6.26

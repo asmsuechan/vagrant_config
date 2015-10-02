@@ -2,7 +2,7 @@ dir=pwd
 if vagrant global-status | grep "${dir}" >/dev/null 2>&1; then
 	echo "vagrant alredy up."
 else
-	vagrant up
+	vagrant up --no-provision
 fi
 
 #transport *.conf from local to vagrant
