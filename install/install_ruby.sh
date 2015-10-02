@@ -6,7 +6,7 @@
 #'runuser' command.
 
 #check existence
-if [ -e /home/vagrant/.rbenv != false ]; then
+if [ ! -e /home/vagrant/.rbenv ]; then
 	echo "rbenv install..."
 	git clone https://github.com/sstephenson/rbenv.git /home/vagrant/.rbenv
 else
