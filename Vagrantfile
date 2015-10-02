@@ -13,11 +13,14 @@ Vagrant.configure(2) do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "centos_7.0"
-  config.vm.provision :shell, path: "install_mysql.sh"
+  #put nginx.conf in particular directory
+  config.vm.provision :shell, path: "set_nginx_config_files.sh"
+  config.vm.provision :shell, path: "install/install_mysql.sh"
+  #install various tools for server
   config.vm.provision :shell, path: "config_server.sh"
-  config.vm.provision :shell, path: "install_ruby.sh"
-  config.vm.provision :shell, path: "install_rails.sh"
-  config.vm.provision :shell, path: "install_nginx.sh"
+  config.vm.provision :shell, path: "install/install_ruby.sh"
+  config.vm.provision :shell, path: "install/install_rails.sh"
+  config.vm.provision :shell, path: "install/install_nginx.sh"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -28,6 +31,7 @@ Vagrant.configure(2) do |config|
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # config.vm.network "forwarded_port", guest: 80, host: 8080
+  # config.vm.network "forwarded_port", guest: 22, host: 2222
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -42,7 +46,7 @@ Vagrant.configure(2) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  # config.vm.synced_folder "../data", "/vagrant_data"
+  # config.vm.synced_folder "./conf_file", "/vagrant"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.

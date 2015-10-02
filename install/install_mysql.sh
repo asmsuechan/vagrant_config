@@ -1,7 +1,6 @@
 #!/bin/sh
 
 #install mysql
-echo "mysql install starting..."
 
 base_url="http://downloads.mysql.com/archives/get/file/"
 files=("MySQL-server-5.6.26-1.linux_glibc2.5.x86_64.rpm" "MySQL-client-5.6.26-1.linux_glibc2.5.x86_64.rpm" "MySQL-shared-compat-5.6.26-1.linux_glibc2.5.x86_64.rpm" "MySQL-devel-5.6.26-1.linux_glibc2.5.x86_64.rpm")
@@ -25,10 +24,4 @@ for file in ${files[@]}; do
 		sudo runuser -l vagrant -c "sudo yum install -y $home$file"
     fi
 done
-
-#install asociated package
-sudo yum -y install perl-Data-Dumper
-#set database directory
-sudo mysql_install_db --datadir=/var/lib/mysql --user=mysql
-
-echo "mysql install finished."
+echo "install finished"
