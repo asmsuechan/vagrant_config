@@ -6,20 +6,31 @@ in order to setup, run as follows:
 ./setup.sh
 ```
 
+##installed component
+```
+Ruby 2.1.6
+Rails
+MySQL 5.6.26
+nginx
+unicorn
+htop
+```
+
 ##structure
 ```
 .
+├── README.md
 ├── Vagrantfile
-├── config_server.sh
 ├── install
 │   ├── install_mysql.sh
 │   ├── install_nginx.sh
 │   ├── install_rails.sh
-│   └── install_ruby.sh
+│   ├── install_ruby.sh
+│   └── install_tools.sh
 ├── nginx_conf_files
 │   ├── nginx.conf
 │   └── rails.conf
-├── set_files_form_local.sh
+├── set_files_from_local.sh
 ├── set_nginx_config_files.sh
 └── setup.sh
 ```

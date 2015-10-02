@@ -17,7 +17,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, path: "set_nginx_config_files.sh"
   config.vm.provision :shell, path: "install/install_mysql.sh"
   #install various tools for server
-  config.vm.provision :shell, path: "config_server.sh"
+  config.vm.provision :shell, path: "install/install_toolssh"
   config.vm.provision :shell, path: "install/install_ruby.sh"
   config.vm.provision :shell, path: "install/install_rails.sh"
   config.vm.provision :shell, path: "install/install_nginx.sh"
